@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace BearProgramPL
 {
-    class BearAdapter : ToyBear
+    class BearAdapter : Bear, ToyBear
     {
+        public ToyBear bear;
+
         void ToyBear.Hug()
         {
-
+            bear.maul();
+            bear.hibernate();
         }
     }
 }
